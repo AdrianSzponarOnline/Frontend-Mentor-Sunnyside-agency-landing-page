@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap");
+:root {
+    --barlow-font: "Barlow", sans-serif;
+    --fraunces-font: "Fraunces", serif;
+    --soft-red: hsl(7, 99%, 70%);
+    --yellow: hsl(51, 100%, 49%);
+    /*graphic design text*/
+    --dark-desaturated-cyan: hsl(167, 40%, 24%);
+    /*photography text*/
+    --dark-blue: hsl(198, 62%, 26%);
+    /*footer*/
+    --dark-moderate-cyan: hsl(168, 34%, 41%);
+    --header-bg: #3ebfff;
+    --footer-bg: #8ed0c4;
+    --container-bg: #fffbf8;
+    --very-dark-desaturated-blue: hsl(212, 27%, 19%);
+    --very-drak-grayish-blue: hsl(213, 9%, 39%);
+    --dark-grayish-blue: hsl(232, 10%, 55%);
+    --grayish-blue: hsl(210, 4%, 67%);
+    --white: hsl(0, 0%, 100%);
+}
+html {
+    font-size: 18px;
+}
+body {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;    
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+li {
+    padding:0;
+    margin: 0;
+}
+header {
+    background-image:url("images/mobile/image-header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 30rem;
+    max-height: 100%;
+    text-align: center;
+}
+nav {
+    position: relative;
+    padding: 1.7rem 1.25rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-container {
+    display: none;
+}
+
+header h1{
+    margin: 0;
+    text-transform: uppercase;
+    font-family: var(--fraunces-font);
+    font-weight: 900;
+    font-size: 2.3rem;
+    letter-spacing: 0.3rem;
+    color: var(--white);
+    padding: 2.85rem 0;
+    text-align: center;    
+}
+.arrow-down {
+    margin-bottom: 1rem;
+}
+.fa-solid {
+    color: var(--white);
+    font-size: 1.6rem;
+    display: inline;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.menu-shown {
+    background-color: var(--white);
+    box-sizing: border-box;
+    width: calc(100% - 2.5rem);
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, 20%);
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.menu-item {
+    font-family: var(--barlow-font);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 19px;
+    color: var(--dark-grayish-blue)
+}
+
+.menu-item-cta {
+    font-size: 0.85rem;
+    letter-spacing: 0.7px;
+    color: var(--very-dark-desaturated-blue);
+    font-family: var(--fraunces-font);
+    font-weight: 900;
+    background-color: var(--yellow);
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 0.9rem 1.5rem;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+.menu-shown::after {
+    content: "";
+    position: absolute;
+    margin-top: -4.5rem;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    transform: translate(0, 70%);
+    background-color: transparent;
+    border-left: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    border-top: 40px solid transparent;
+    border-right: 40px solid var(--white);
+  }
+
+.transform-section-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;    
+}
+.transform-image-container {
+    background-color: var(--container-bg);
+    background-image: url("images/mobile/image-transform.jpg");
+    width:100%;
+    min-height: 312px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.transform-description-container {
+    padding: 3.5rem 1.25rem;
+}
+.transform-description-container h2{
+    font-family: var(--fraunces-font);
+    margin:0;
+    padding:0;
+    font-weight: 900;
+    font-size: 1.8rem;
+    color: var(--very-dark-desaturated-blue);
+}
+.transform-description-container p {
+    margin:0;
+    padding-top: 1rem;
+    font-size: 18px;
+    font-family: "Barlow", sans-serif;
+    color: var(--dark-grayish-blue);
+    line-height: 1.7rem;
+}
+.transform-description-container a{
+    text-transform: uppercase;
+    color: var(--very-dark-desaturated-blue);
+    font-size: 0.9rem;
+    font-family: var(--fraunces-font);
+    text-decoration: none;
+    margin-top:2rem;
+    display: inline-block;
+}
+
